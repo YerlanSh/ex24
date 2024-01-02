@@ -1,0 +1,16 @@
+<!-- templates/customers/customer_detail.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Customer Detail</h2>
+  <p><strong>Name:</strong> {{ client.first_name }} {{ client.last_name }}</p>
+  <p><strong>Address:</strong> {{ client.address }}</p>
+  <p><strong>Phone Number:</strong> {{ client.phone_number }}</p>
+  <p><strong>Date of Birth:</strong> {{ client.birthday }}</p>
+  <p><strong>Hobby:</strong> {{ client.hobby }}</p>
+  <p><strong>Previous Workplace:</strong> {{ client.last_work }}</p>
+
+  <h3>Product Preferences</h3>
+  <p><strong>Favorite Categories:</strong> {{ client.сlientsproducts.categories }}</p>
+  <p><strong>Preferred Brands:</strong> {{ client.сlientsproducts.brands }}</p>
+{% endblock %}
